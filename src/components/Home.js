@@ -1,14 +1,9 @@
 function Home() {
   return (
-    <>
-      <div className="container">
-        <div className="text-zone">
-          <button className="contact-button">
-            DOWNLOAD CV
-          </button>
-        </div>
-      </div>
-    </>
+    <div className="home-page">
+      <h1>Aya Zayed</h1>
+      <h1>Front-end Developer</h1>
+    </div>
   );
 }
 

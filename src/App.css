@@ -1,0 +1,25 @@
+/* home page styles */
+
+.home-page {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, var(--black) 0%, var(--peach) 39%, var(--robin-egg-blue) 100%);
+}
+
+.home-page h1 {
+    font-size: var(--h1);
+    color: var(--white);
+}
+
+/* navbar styles */
+
+
+
+/* about page sttyles */
+
+
+
+/* contact page styles */
+
+
+
+/* projects page styles */
