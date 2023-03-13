@@ -8,4 +8,4 @@ function Navbar() {
   );
 }
 
-export default Sidebar;
+export default Navbar;

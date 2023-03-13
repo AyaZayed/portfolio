@@ -13,11 +13,12 @@
     --peach: hsla(28, 95%, 76%, 1);
     --robin-egg-blue: hsla(185, 88%, 43%, 1);
     --light-coral: hsla(356, 82%, 70%, 1);
-    --black: rgba(2, 0, 36, 1);
-    --white: rgb(255, 255, 255);
-    --dark-grey: #121212;
+    --black: #020024;
+    --white: #ffffff;
+    --dark-grey: #1f1f1f;
     --lighter-grey: #2a2929;
     --light-grey: #545151;
+
 }
 
 html {
@@ -25,12 +26,12 @@ html {
     font-family: var(--font-family);
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
     --background: var(--dark-grey);
     --font-color: var(--white);
 }
 
-[data-theme='light'] {
+[data-theme="light"] {
     --background: var(--white);
     --font-color: var(--dark-grey);
 }
