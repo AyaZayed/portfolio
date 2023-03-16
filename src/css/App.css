@@ -5,30 +5,44 @@
     color: var(--font-color);
 }
 
-.theme-button {
-    background: transparent;
-    border: none;
+/* navbar styles */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
 }
 
-.theme-button:focus {
-    outline: none;
-}
-
-.theme-icon {
-    color: var(--font-color);
-    font-size: 2rem;
+.navbar .nav-title img {
+    width: 2rem;
 }
 
 /* home page styles */
 
 .home-page {
     background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, var(--black) 0%, var(--peach) 39%, var(--robin-egg-blue) 100%);
+    background: var(--background-gradient);
 }
 
 .home-page h1 {
     font-size: var(--h1);
     color: var(--white);
+}
+
+.navbar .theme-button {
+    background: transparent;
+    border: none;
+}
+
+.navbar .theme-button:focus {
+    outline: none;
+}
+
+.navbar .theme-icon {
+    color: var(--font-color);
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 /* navbar styles */
