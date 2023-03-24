@@ -16,7 +16,7 @@
     --black: hsl(243, 100%, 7%);
     --white: hsl(0, 0%, 100%);
     --dark-grey: hsl(0, 0%, 18%);
-    --lighter-grey: hsl(0, 1%, 16%);
+    --lighter-grey: hsl(0, 0%, 23%);
     --light-grey: hsl(0, 2%, 32%);
     --background-gradient: linear-gradient(90deg, var(--black) 0%, var(--peach) 39%, var(--robin-egg-blue) 100%);
 }

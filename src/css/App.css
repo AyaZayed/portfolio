@@ -9,25 +9,88 @@
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    flex-flow: column nowrap;
     align-items: center;
-    padding: 0 3rem;
+
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: visible;
+    transition: left 0.3s ease;
+    z-index: 999;
+    display: none;
+}
+
+
+
+.navbar .menu-close {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    width: 2rem;
+    color: var(--font-color);
+}
+
+.navbar:target {
+    display: block;
+    outline: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background);
+}
+
+.navbar:target .menu-close {
+    z-index: 1001;
+}
+
+.main-menu:target+.backdrop {
+    position: fixed;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background: rgba(0, 0, 0, .85);
+    cursor: default;
+}
+
+@media (min-width:768px) {
+    .main-menu {
+        position: static;
+        display: block;
+    }
+
+    .main-menu ul {
+        padding: 0;
+        height: auto;
+        width: auto;
+        background: none;
+        overflow: hidden;
+        text-align: center;
+    }
+}
+
+.navbar:target ul {
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar ul {
+    flex-basis: 75%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+
+.navbar .nav-title {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .navbar .nav-title img {
     width: 2rem;
-}
-
-/* home page styles */
-
-.home-page {
-    background: rgb(2, 0, 36);
-    background: var(--background-gradient);
-}
-
-.home-page h1 {
-    font-size: var(--h1);
-    color: var(--white);
 }
 
 .navbar .theme-button {
@@ -41,12 +104,27 @@
 
 .navbar .theme-icon {
     color: var(--font-color);
-    font-size: 2rem;
+    font-size: 1.7rem;
     cursor: pointer;
 }
 
-/* navbar styles */
+.navbar a {
+    text-decoration: none;
+    margin-bottom: 2rem;
+    color: var(--font-color);
+}
 
+/* home page styles */
+
+.home-page {
+    background: rgb(2, 0, 36);
+    background: var(--background-gradient);
+}
+
+.home-page h1 {
+    font-size: var(--h1);
+    color: var(--white);
+}
 
 
 /* about page sttyles */
