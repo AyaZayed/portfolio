@@ -11,24 +11,27 @@ function Navbar({ theme, toggleTheme }) {
         <FontAwesomeIcon icon={faBars} />
       </a>
       <nav className="navbar" id="navbar" aria-label="navbar menu">
-        <a href="#menu-toggle" id="menu-close" class="menu-close" aria-label="Close  menu">
-          <FontAwesomeIcon icon={faX} />
-        </a>
-        <Link to='/' className="nav-title">
-          <img src={Logo} />
-        </Link>
-        <ul>
-          <NavLink to='/projects' exact='true' activeclassname="active">
-            Projects
-          </NavLink>
-          <NavLink to='/about' exact='true' activeclassname="active" >
-            About
-          </NavLink>
-          <button className="theme-button" onClick={toggleTheme}>
-            {theme === "dark" ? <FontAwesomeIcon className="theme-icon" icon={faSun} />
-              : <FontAwesomeIcon icon={faMoon} className="theme-icon" />}
-          </button>
-        </ul>
+        <div className="nav-items">
+          <a href="#menu-toggle" id="menu-close" class="menu-close" aria-label="Close  menu">
+            <FontAwesomeIcon icon={faX} />
+          </a>
+          <Link to='/' className="nav-title">
+            <img src={Logo} />
+          </Link>
+          <ul>
+            <li>Get in touch &rarr;</li>
+            <li><NavLink to='/projects' exact='true' activeclassname="active">
+              Projects
+            </NavLink></li>
+            <li><NavLink to='/about' exact='true' activeclassname="active" >
+              About
+            </NavLink></li>
+            <li><button className="theme-button" onClick={toggleTheme}>
+              {theme === "dark" ? <FontAwesomeIcon className="theme-icon" icon={faSun} />
+                : <FontAwesomeIcon icon={faMoon} className="theme-icon" />}
+            </button></li>
+          </ul>
+        </div>
         <a href="#main-menu-toggle" class="backdrop" tabindex="-1" hidden></a>
       </nav>
     </>

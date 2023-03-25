@@ -3,24 +3,58 @@
 .page {
     background-color: var(--background);
     color: var(--font-color);
+    height: 100vh;
+    width: 100vw;
 }
 
 /* navbar styles */
 
 .navbar {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-
     position: fixed;
-    overflow-y: auto;
-    overflow-x: visible;
-    transition: left 0.3s ease;
+    overflow: hidden;
+    background-color: transparent;
     z-index: 999;
     display: none;
+    top: 0;
+    width: 100vw;
+    padding: 2rem 0;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
 }
 
+.navbar .nav-items {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    align-items: center;
+    padding-top: 3rem;
+}
 
+.navbar ul {
+    flex-basis: 60%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+
+.navbar ul li:hover,
+.navbar ul a:hover,
+.navbar .theme-icon:hover,
+.menu-close:hover {
+    color: var(--primary-color);
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    z-index: 999;
+}
 
 .navbar .menu-close {
     position: absolute;
@@ -32,7 +66,6 @@
 
 .navbar:target {
     display: block;
-    outline: none;
     height: 100vh;
     width: 100vw;
     background-color: var(--background);
@@ -42,7 +75,7 @@
     z-index: 1001;
 }
 
-.main-menu:target+.backdrop {
+.navbar:target+.backdrop {
     position: fixed;
     display: block;
     left: 0;
@@ -54,40 +87,9 @@
     cursor: default;
 }
 
-@media (min-width:768px) {
-    .main-menu {
-        position: static;
-        display: block;
-    }
-
-    .main-menu ul {
-        padding: 0;
-        height: auto;
-        width: auto;
-        background: none;
-        overflow: hidden;
-        text-align: center;
-    }
-}
-
-.navbar:target ul {
-    position: relative;
-    z-index: 1000;
-}
-
-.navbar ul {
-    flex-basis: 75%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0;
-}
-
-.navbar .nav-title {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
+/* .navbar .nav-title {
+    margin: 2rem auto;
+} */
 
 .navbar .nav-title img {
     width: 2rem;
@@ -114,16 +116,177 @@
     color: var(--font-color);
 }
 
+@media (min-width:768px) {
+    .navbar {
+        position: fixed;
+        display: block;
+    }
+
+    .navbar .nav-items {
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    .navbar ul {
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+
+    .navbar ul li {
+        padding-left: 2rem;
+    }
+
+    .navbar a {
+        margin-bottom: 0;
+    }
+
+    .menu-close {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
 /* home page styles */
 
 .home-page {
+    --shadow: #000;
+    --bg: #737373;
+    --header: var(--font-color);
+    --color: #fafafa;
+    --lit-header: #e6e6e6;
+    --speed: 2s;
+    z-index: 10;
+    height: 83vh;
+    width: 97vw;
+    position: absolute;
+    top: 20px;
+    left: 20px;
     background: rgb(2, 0, 36);
     background: var(--background-gradient);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.home-page * {
+    transform-style: preserve-3d;
+}
+
+@property --swing-x {
+    initial-value: 0;
+    inherits: false;
+    syntax: '<integer>';
+}
+
+@property --swing-y {
+    initial-value: 0;
+    inherits: false;
+    syntax: '<integer>';
 }
 
 .home-page h1 {
-    font-size: var(--h1);
-    color: var(--white);
+    -webkit-animation: swing var(--speed) infinite alternate ease-in-out;
+    animation: swing var(--speed) infinite alternate ease-in-out;
+    font-size: clamp(5rem, 40vmin, 20rem);
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    letter-spacing: 1rem;
+    transform: translate3d(0, 0, 0vmin);
+    --x: calc(50% + (var(--swing-x) * 0.5) * 1%);
+    background: radial-gradient(var(--lit-header), var(--header) 45%) var(--x) 100%/200% 200%;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-transform: translate3d(0, 0, 0vmin);
+    -moz-transform: translate3d(0, 0, 0vmin);
+    -ms-transform: translate3d(0, 0, 0vmin);
+    -o-transform: translate3d(0, 0, 0vmin);
+}
+
+.home-page h1:after {
+    -webkit-animation: swing var(--speed) infinite alternate ease-in-out;
+    animation: swing var(--speed) infinite alternate ease-in-out;
+    content: "Aya Zayed";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--shadow);
+    filter: blur(1.5vmin);
+    transform: scale(1.05) translate3d(0, 12%, -10vmin) translate(calc((var(--swing-x, 0) * 0.05) * 1%), calc((var(--swing-y) * 0.05) * 1%));
+}
+
+.home-page .cloak {
+    animation: swing var(--speed) infinite alternate-reverse ease-in-out;
+    height: 100%;
+    width: 100%;
+    transform-origin: 50% 30%;
+    transform: rotate(calc(var(--swing-x) * -0.25deg));
+    background: radial-gradient(40% 40% at 50% 42%, transparent, #000 35%);
+}
+
+.home-page .cloak__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.home-page .cloak__container {
+    height: 350vmax;
+    width: 400vmax;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes swing {
+    0% {
+        --swing-x: -100;
+        --swing-y: -100;
+    }
+
+    50% {
+        --swing-y: 0;
+    }
+
+    100% {
+        --swing-y: -100;
+        --swing-x: 100;
+    }
+}
+
+@keyframes swing {
+    0% {
+        --swing-x: -100;
+        --swing-y: -100;
+    }
+
+    50% {
+        --swing-y: 0;
+    }
+
+    100% {
+        --swing-y: -100;
+        --swing-x: 100;
+    }
+}
+
+@media (min-width:768px) {
+    .home-page {
+        padding-top: 4rem;
+    }
 }
 
 
