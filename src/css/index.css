@@ -1,7 +1,7 @@
 :root {
     /* font stuff */
     --font-size-basis: 1.5rem;
-    --type-scale: 1.5;
+    --type-scale: 1.8;
     --h5: var(--font-size-basis);
     --h4: calc(var(--h5) * var(--type-scale));
     --h3: calc(var(--h4) * var(--type-scale));
@@ -15,7 +15,7 @@
     --light-coral: hsla(356, 82%, 70%, 1);
     --black: hsl(243, 100%, 7%);
     --white: hsl(0, 0%, 100%);
-    --dark-grey: hsl(0, 0%, 18%);
+    --dark-grey: hsl(0, 0%, 7%);
     --lighter-grey: hsl(0, 0%, 23%);
     --light-grey: hsl(0, 2%, 32%);
     --primary-color: var(--robin-egg-blue);

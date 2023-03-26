@@ -4,7 +4,17 @@ import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../../public/logo.svg";
 
+import { useState } from 'react'
+
 function Navbar({ theme, toggleTheme }) {
+  const [text] = useState('ayazayedofficial@gmail.com');
+
+  const copy = async () => {
+    await navigator.clipboard.writeText(text);
+    const copyButton = document.getElementById('copy-button');
+    copyButton.classList.add('copied');
+  }
+
   return (
     <>
       <a href="#navbar" id="menu-toggle" class="menu-toggle" aria-label="Open  menu">
@@ -16,10 +26,10 @@ function Navbar({ theme, toggleTheme }) {
             <FontAwesomeIcon icon={faX} />
           </a>
           <Link to='/' className="nav-title">
-            <img src={Logo} />
+            <img src={Logo} alt='AZ letters' />
           </Link>
           <ul>
-            <li>Get in touch &rarr;</li>
+            <li><button id="copy-button" onClick={copy}></button></li>
             <li><NavLink to='/projects' exact='true' activeclassname="active">
               Projects
             </NavLink></li>

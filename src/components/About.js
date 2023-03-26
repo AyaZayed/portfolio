@@ -1,20 +1,17 @@
+import Header from "./Header";
+import Face from "../../src/img/ai-face.png";
+
 function About() {
   return (
     <>
-      <div className="container about-page">
-        <div className="text-zone">
-          <p>
-            I'm a front-end web developer with a passion for creating beautiful
-            and meaningful web experiences. I have graduated from the University
-            of Mansoura with a degree in Computer Science Bioinformatics major.
-          </p>
-          <p>
-            I have been learning and trying my way around front-end technologies
-            for a few years now. I'm currently working with React.js and trying
-            to be the best I can be at it.
-          </p>
+      <main className="about-page">
+        <Header text={'ABOUT'} />
+        <div className="content">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem expedita voluptates necessitatibus voluptate animi suscipit impedit sed quos. Eligendi consectetur aliquid veniam nobis tempore. At molestiae beatae perspiciatis enim! Iure.</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem expedita voluptates necessitatibus voluptate animi suscipit impedit sed quos. Eligendi consectetur aliquid veniam nobis tempore. At molestiae beatae perspiciatis enim! Iure.</p>
+          <img src={Face} alt="Aya Zayed's picture" />
         </div>
-      </div>
+      </main >
     </>
   );
 }

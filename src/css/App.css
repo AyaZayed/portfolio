@@ -3,8 +3,6 @@
 .page {
     background-color: var(--background);
     color: var(--font-color);
-    height: 100vh;
-    width: 100vw;
 }
 
 /* navbar styles */
@@ -42,11 +40,40 @@
     padding: 0;
 }
 
-.navbar ul li:hover,
+.navbar ul li button:hover,
 .navbar ul a:hover,
 .navbar .theme-icon:hover,
 .menu-close:hover {
     color: var(--primary-color);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+.navbar li:first-of-type button {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--font-color);
+}
+
+.navbar li:first-of-type button::before {
+    content: 'Get in touch \2192';
+}
+
+.navbar li:first-of-type:hover button::before {
+    content: '';
+}
+
+.navbar li:first-of-type:hover button::before {
+    content: 'Copy email ?';
+}
+
+.navbar li:first-of-type button.copied::before {
+    content: "Copied!";
 }
 
 .menu-toggle {
@@ -54,6 +81,7 @@
     top: 3rem;
     right: 3rem;
     z-index: 999;
+    color: var(--font-color);
 }
 
 .navbar .menu-close {
@@ -92,7 +120,7 @@
 } */
 
 .navbar .nav-title img {
-    width: 2rem;
+    width: 3rem;
 }
 
 .navbar .theme-button {
@@ -155,7 +183,7 @@
 /* home page styles */
 
 .home-page {
-    --shadow: #000;
+    --shadow: #000000af;
     --bg: #737373;
     --header: var(--font-color);
     --color: #fafafa;
@@ -193,6 +221,7 @@
 }
 
 .home-page h1 {
+    font-size: var(--h2);
     -webkit-animation: swing var(--speed) infinite alternate ease-in-out;
     animation: swing var(--speed) infinite alternate ease-in-out;
     font-size: clamp(5rem, 40vmin, 20rem);
@@ -287,12 +316,60 @@
     .home-page {
         padding-top: 4rem;
     }
+
+    .home-page h1 {
+        font-size: var(--h1);
+    }
 }
 
 
 /* about page sttyles */
 
+.header {
+    display: block;
+    font-size: 5.5rem;
+    /* margin: 0 auto; */
+}
 
+.header .text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 10% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.header .text-copy:nth-child(1) {
+    stroke: #4D163D;
+    animation-delay: -1;
+}
+
+.header .text-copy:nth-child(2) {
+    stroke: #840037;
+    animation-delay: -2s;
+}
+
+.header .text-copy:nth-child(3) {
+    stroke: var(--peach);
+    animation-delay: -3s;
+}
+
+.header .text-copy:nth-child(4) {
+    stroke: var(--light-coral);
+    animation-delay: -4s;
+}
+
+.header .text-copy:nth-child(5) {
+    stroke: var(--robin-egg-blue);
+    animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+    100% {
+        stroke-dashoffset: -35%;
+    }
+}
 
 /* contact page styles */
 
