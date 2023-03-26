@@ -1,3 +1,5 @@
+import Resume from "./Resume";
+
 function Home() {
   return (
     <div className="home-page">
@@ -7,6 +9,9 @@ function Home() {
         <div class="cloak__container">
           <div class="cloak"></div>
         </div>
+      </div>
+      <div className="button-container">
+        <Resume />
       </div>
     </div>
   );

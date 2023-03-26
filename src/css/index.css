@@ -14,7 +14,7 @@
     --robin-egg-blue: hsla(185, 88%, 43%, 1);
     --light-coral: hsla(356, 82%, 70%, 1);
     --black: hsl(243, 100%, 7%);
-    --white: hsl(0, 0%, 100%);
+    --white: hsl(0, 4%, 90%);
     --dark-grey: hsl(0, 0%, 7%);
     --lighter-grey: hsl(0, 0%, 23%);
     --light-grey: hsl(0, 2%, 32%);
@@ -56,4 +56,12 @@ h1 {
 
 ul {
     list-style: none;
+}
+
+::-moz-selection {
+    background-color: var(--primary-color);
+}
+
+::selection {
+    background-color: var(--primary-color);
 }

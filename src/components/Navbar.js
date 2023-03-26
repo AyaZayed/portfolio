@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun, faXmarkCircle } from "@fortawesome/free-regular-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../../public/logo.svg";
@@ -36,7 +36,7 @@ function Navbar({ theme, toggleTheme }) {
             <li><NavLink to='/about' exact='true' activeclassname="active" >
               About
             </NavLink></li>
-            <li><button className="theme-button" onClick={toggleTheme}>
+            <li><button className="theme-button" onClick={toggleTheme} aria-label='change theme to dark or light mode'>
               {theme === "dark" ? <FontAwesomeIcon className="theme-icon" icon={faSun} />
                 : <FontAwesomeIcon icon={faMoon} className="theme-icon" />}
             </button></li>

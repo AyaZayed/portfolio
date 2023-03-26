@@ -5,7 +5,7 @@ export default function Header({ text }) {
         <svg className='header' viewBox="0 0 1360 250">
             <symbol id="s-text">
                 <text text-anchor="middle" x="50%" y="80%">{text}</text>
-                {/* <text text-anchor="middle" x="52%" y="80%">{text}</text> */}
+                {/* <text text-anchor="middle" x="51%" y="80%">{text}</text> */}
 
             </symbol>
 
