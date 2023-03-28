@@ -17,12 +17,12 @@ function Navbar({ theme, toggleTheme }) {
 
   return (
     <>
-      <a href="#navbar" id="menu-toggle" class="menu-toggle" aria-label="Open  menu">
+      <a href="#navbar" id="menu-toggle" className="menu-toggle" aria-label="Open  menu">
         <FontAwesomeIcon icon={faBars} />
       </a>
       <nav className="navbar" id="navbar" aria-label="navbar menu">
         <div className="nav-items">
-          <a href="#menu-toggle" id="menu-close" class="menu-close" aria-label="Close  menu">
+          <a href="#menu-toggle" id="menu-close" className="menu-close" aria-label="Close  menu">
             <FontAwesomeIcon icon={faX} />
           </a>
           <Link to='/' className="nav-title">
@@ -30,10 +30,10 @@ function Navbar({ theme, toggleTheme }) {
           </Link>
           <ul>
             <li><button id="copy-button" onClick={copy}></button></li>
-            <li><NavLink to='/projects' exact='true' activeclassname="active">
+            <li><NavLink to='/projects' exact='true'>
               Projects
             </NavLink></li>
-            <li><NavLink to='/about' exact='true' activeclassname="active" >
+            <li><NavLink to='/about' exact='true' >
               About
             </NavLink></li>
             <li><button className="theme-button" onClick={toggleTheme} aria-label='change theme to dark or light mode'>
@@ -42,7 +42,7 @@ function Navbar({ theme, toggleTheme }) {
             </button></li>
           </ul>
         </div>
-        <a href="#main-menu-toggle" class="backdrop" tabindex="-1" hidden></a>
+        <a href="#main-menu-toggle" className="backdrop" tabIndex="-1" hidden></a>
       </nav>
     </>
   );

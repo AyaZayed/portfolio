@@ -73,7 +73,7 @@
 }
 
 .navbar li:first-of-type button.copied::before {
-    content: "Copied!";
+    content: "Copied !";
 }
 
 .menu-toggle {
@@ -399,18 +399,39 @@
 }
 
 .about-page .content .contact-info {
+    width: 100%;
     display: flex;
     flex-flow: column nowrap;
-    width: 100%;
-    overflow: hidden;
-    justify-content: space-between;
+    align-items: center;
+}
+
+.about-page .content .contact-info .links {
+    width: 54%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.about-page .content .contact-info .links svg {
+    width: 30px;
+}
+
+@media (min-width:768px) {
+    .about-page .content .contact-info {
+        align-items: flex-start;
+    }
+
+    .about-page .content .contact-info .links {
+        justify-content: flex-start;
+    }
 }
 
 .about-page .contact-info a {
     text-decoration: none;
+    flex-basis: 10%;
+    margin: 1rem;
     color: var(--font-color);
     fill: var(--font-color);
-    flex-basis: 10%;
     transition: all .3s ease;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
