@@ -14,7 +14,7 @@ export default function Header({ text }) {
                 <use xlinkHref="#s-text" className="text-copy"></use>
                 <use xlinkHref="#s-text" className="text-copy"></use>
                 <use xlinkHref="#s-text" className="text-copy"></use>
-                <use xlinkHref="#s-text" className="text-copy" ></use >
+                <use xlinkHref="#s-text" className="text-copy" ></use>
             </g >
         </svg >
     )
