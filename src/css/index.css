@@ -1,13 +1,14 @@
 :root {
-    /* font stuff */
+    /* fonts stuff */
     --font-size-basis: 1.5rem;
-    --type-scale: 1.8;
+    --type-scale: 1.5;
     --h5: var(--font-size-basis);
     --h4: calc(var(--h5) * var(--type-scale));
     --h3: calc(var(--h4) * var(--type-scale));
     --h2: calc(var(--h3) * var(--type-scale));
     --h1: calc(var(--h2) * var(--type-scale));
     --font-small: calc(0.667rem);
+    --secondary-font-family: 'Libre Baskerville', serif;
     --font-family: 'Varela Round', sans-serif;
     /* colors */
     --peach: hsla(28, 95%, 76%, 1);
@@ -22,11 +23,6 @@
     --background-gradient: linear-gradient(90deg, var(--black) 0%, var(--peach) 39%, var(--robin-egg-blue) 100%);
 }
 
-html {
-    font-size: 100%;
-    font-family: var(--font-family);
-}
-
 [data-theme="dark"] {
     --background: var(--dark-grey);
     --font-color: var(--white);
@@ -35,6 +31,13 @@ html {
 [data-theme="light"] {
     --background: var(--white);
     --font-color: var(--dark-grey);
+}
+
+html {
+    font-size: 100%;
+    font-family: var(--font-family);
+    background-color: var(--background);
+    color: var(--font-color);
 }
 
 p {
