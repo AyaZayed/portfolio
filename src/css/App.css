@@ -567,7 +567,11 @@
 .swiper-slide {
     height: fit-content !important;
     font-size: var(--h1);
-    padding: 5rem 0;
+    /* padding: 7rem 0; */
     text-align: center;
-    /* background: url(https://res.cloudinary.com/dcfrq5i2y/image/upload/v1680661537/projects%20backgrounds/word_recognizer_jpf25j.png) no-repeat center center/cover; */
+    background: var(--img) no-repeat center center/contain;
+}
+
+.swiper-slide a:hover {
+    color: var(--primary-color);
 }
