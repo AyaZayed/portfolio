@@ -639,7 +639,7 @@
     justify-content: center;
     align-items: center;
     background-color: white;
-    color: var(--font-color);
+    color: var(--black);
     text-align: center;
     border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -666,7 +666,7 @@
 .project-details .project-cube .swiper-slide a svg {
     width: 5rem;
     height: 5rem;
-    fill: var(--font-color);
+    fill: var(--black);
 }
 
 .project-details .project-cube .swiper-slide a svg:hover {

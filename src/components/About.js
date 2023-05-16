@@ -1,7 +1,6 @@
 import Header from "./Header";
 import { NavLink } from "react-router-dom";
 import Resume from "./Resume";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function About() {
 
