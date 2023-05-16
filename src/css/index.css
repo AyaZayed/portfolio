@@ -12,7 +12,7 @@
     --font-family: 'Varela Round', sans-serif;
     /* colors */
     --peach: hsla(28, 95%, 76%, 1);
-    --robin-egg-blue: hsla(185, 88%, 43%, 1);
+    --robin-egg-blue: hsl(185, 88%, 43%);
     --light-coral: hsla(356, 82%, 70%, 1);
     --black: hsl(243, 100%, 7%);
     --white: hsl(0, 4%, 90%);

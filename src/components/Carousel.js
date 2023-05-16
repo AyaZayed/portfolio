@@ -26,7 +26,7 @@ export default function Carousel({ projects }) {
                     project.data.dynamic ?
                         <SwiperSlide className='project' key={project.id}
                             style={{ "--img": `url(${project.data.img})` }}>
-                            <Link to="/projects/details" state={project} exact='true'>{project.data.name}</Link>
+                            <Link to='/projects/details' state={project} exact='true'>{project.data.name}</Link>
                         </SwiperSlide>
                         : null
                 ))}

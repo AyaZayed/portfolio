@@ -557,21 +557,142 @@
     align-items: center;
 }
 
-.projects-page .projects a {
-    text-decoration: none;
-    color: var(--font-color);
-    font-size: var(--h1);
-    font-family: var(--secondary-font-family);
+.projects-page svg {
+    margin-bottom: 2rem;
 }
 
-.swiper-slide {
+.projects-page .swiper-slide {
     height: fit-content !important;
-    font-size: var(--h1);
     /* padding: 7rem 0; */
     text-align: center;
+    font-size: var(--h1);
     background: var(--img) no-repeat center center/contain;
 }
 
-.swiper-slide a:hover {
+.projects-page .projects .swiper-slide a {
+    text-decoration: none;
+    color: var(--font-color);
+    font-family: var(--secondary-font-family);
+}
+
+.projects-page .swiper-slide a:hover {
     color: var(--primary-color);
+}
+
+@media (max-width:768px) {
+    .projects-page .swiper-slide a {
+        font-size: var(--h2);
+    }
+
+    .projects-page svg {
+        padding-top: 1rem;
+    }
+
+    .projects-page svg text {
+        font-size: 10rem;
+    }
+}
+
+.project-details {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 8rem 0;
+    background: var(--back-img) no-repeat center center/contain;
+}
+
+.project-details .project-cube {
+    height: 60vh;
+    width: 90vw;
+    margin-bottom: 3rem;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow:
+        0 0 60px 10px var(--peach),
+        0 0 100px 10px var(--light-coral),
+        0 0 140px 10px var(--primary-color);
+}
+
+.project-details .project-cube .swiper-slide {
+    height: 100% !important;
+    width: 100% !important;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: var(--font-color);
+    text-align: center;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+
+}
+
+.project-details .project-cube .swiper-slide .technologies {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.project-details .project-cube .swiper-slide .technologies svg {
+    width: 3rem;
+    height: 3rem;
+    fill: var(--primary-color);
+}
+
+.project-details .project-cube .swiper-slide a svg {
+    width: 5rem;
+    height: 5rem;
+    fill: var(--font-color);
+}
+
+.project-details .project-cube .swiper-slide a svg:hover {
+
+    fill: var(--primary-color);
+}
+
+.project-details .project-cube .swiper-slide .project-details-img {
+    height: 100%;
+    width: 100%;
+}
+
+.project-details .project-cube .swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.project-details .swiper-pagination-bullet-active {
+    background-color: var(--primary-color);
+}
+
+@media (min-width:768px) {
+    .project-details .project-cube {
+        width: 50vw;
+    }
+}
+
+@media (min-width:992px) {
+    .project-details .project-cube {
+        width: 40vw;
+    }
+}
+
+@media (min-width:1200px) {
+    .project-details .project-cube {
+        width: 30vw;
+    }
 }
