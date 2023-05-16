@@ -396,6 +396,11 @@
     }
 }
 
+.about-page {
+    height: 100%;
+    padding: 1.5rem 0;
+}
+
 .about-page .content {
     display: flex;
     padding: 0 5rem;
@@ -409,6 +414,7 @@
     display: flex;
     flex-flow: column nowrap;
     padding-top: 1rem;
+    text-align: center;
 }
 
 .about-page .content p,
@@ -432,10 +438,19 @@
 }
 
 .about-page .content .contact-info .links svg {
-    width: 30px;
+    width: 40px;
+}
+
+.about-page .content .personal-pic {
+    height: 60.3vh;
 }
 
 @media (min-width:768px) {
+    .about-page .content .text {
+        padding: 0 5rem;
+        text-align: left;
+    }
+
     .about-page .content .contact-info {
         align-items: flex-start;
     }
@@ -448,7 +463,7 @@
 .about-page .contact-info a {
     text-decoration: none;
     flex-basis: 10%;
-    margin: 1rem;
+    margin: 1rem 2rem;
     color: var(--font-color);
     fill: var(--font-color);
     transition: all .3s ease;

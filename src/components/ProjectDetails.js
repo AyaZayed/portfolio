@@ -7,8 +7,7 @@ import "swiper/swiper.min.css";
 import "swiper/swiper-bundle.css"
 
 import { EffectCube, Pagination } from "swiper";
-import { fill, crop } from "@cloudinary/url-gen/actions/resize";
-import { autoGravity, focusOn } from '@cloudinary/url-gen/qualifiers/gravity';
+import { fill } from "@cloudinary/url-gen/actions/resize";
 
 export default function ProjectDetails() {
     const location = useLocation();
