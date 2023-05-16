@@ -1,7 +1,7 @@
 import Header from "./Header";
-import Face from "../../src/img/ai-face.png";
 import { NavLink } from "react-router-dom";
 import Resume from "./Resume";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function About() {
 
