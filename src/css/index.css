@@ -1,6 +1,6 @@
 :root {
     /* fonts stuff */
-    --font-size-basis: 1.5rem;
+    --font-size-basis: 2.5rem;
     --type-scale: 1.5;
     --h5: var(--font-size-basis);
     --h4: calc(var(--h5) * var(--type-scale));

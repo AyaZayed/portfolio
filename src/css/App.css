@@ -191,7 +191,7 @@
     --speed: 2s;
     z-index: 10;
     height: 90%;
-    width: 92%;
+    width: 88%;
     position: absolute;
     top: 20px;
     left: 20px;
@@ -221,7 +221,8 @@
 }
 
 .home-page h1 {
-    font-size: 15rem;
+    text-align: center;
+    font-size: 4.2rem;
     -webkit-animation: swing var(--speed) infinite alternate ease-in-out;
     animation: swing var(--speed) infinite alternate ease-in-out;
     /* font-size: clamp(5rem, 33vmin, 20rem); */
@@ -323,16 +324,35 @@
     }
 }
 
+@media (min-width:384px) {
+    .home-page {
+        height: 85%;
+        width: 93%;
+
+    }
+}
+
 @media (min-width:768px) {
     .home-page {
         padding-top: 4rem;
-        height: 85%;
-        width: 97%;
+        width: 95%;
     }
 
-    /* .home-page h1 {
+    .home-page h1 {
         font-size: var(--h1);
-    } */
+    }
+}
+
+@media (min-width:992px) {
+    .home-page {
+        width: 96%;
+    }
+}
+
+@media (min-width:1200px) {
+    .home-page {
+        width: 97%;
+    }
 }
 
 
