@@ -190,7 +190,7 @@
     --lit-header: #e6e6e6;
     --speed: 2s;
     z-index: 10;
-    height: 90%;
+    height: 80%;
     width: 88%;
     position: absolute;
     top: 20px;
@@ -278,12 +278,16 @@
 }
 
 .home-page .cloak__container {
-    height: 350vmax;
+    height: 500vmax;
     width: 400vmax;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
 
 .home-page .button-container {
@@ -326,7 +330,7 @@
 
 @media (min-width:384px) {
     .home-page {
-        height: 85%;
+        height: 83%;
         width: 93%;
 
     }
