@@ -357,6 +357,10 @@
     .home-page {
         width: 97%;
     }
+
+    .home-page h1 {
+        font-size: calc(var(--h1) * 1.7);
+    }
 }
 
 
