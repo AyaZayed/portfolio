@@ -10,7 +10,7 @@ function About() {
         <Header text={'ABOUT'} />
         <div className="content">
           <div className="text">
-            <p>Computer science graduate with immense curiosity for everything. I’ve always loved solving complex problems and creating interesting things. I’m looking forward to any opportunity to show my skills and learn from people.</p>
+            <p>Computer science graduate with immense curiosity for everything. I’ve always loved solving complex problems and creating interesting things. I’m looking forward to any opportunity to show my skills and learn.</p>
             <div className="contact-info">
               <div className="links">
                 <NavLink to='https://www.linkedin.com/in/aya-zayed-2000/'>
