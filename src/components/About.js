@@ -23,7 +23,7 @@ function About() {
               <Resume />
             </div>
           </div>
-          <img className="personal-pic" src='https://res.cloudinary.com/dcfrq5i2y/image/upload/v1684268421/ai-face_jc4cvn.png' alt="Aya Zayed's picture" />
+          <img className="personal-pic" src='https://res.cloudinary.com/dcfrq5i2y/image/upload/v1684631133/ai-face_ndlxjx.png' alt="Aya Zayed's picture" />
         </div>
       </main >
     </>
