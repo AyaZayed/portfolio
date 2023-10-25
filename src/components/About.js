@@ -10,11 +10,8 @@ function About() {
         <Header text={'ABOUT'} />
         <div className="content">
           <div className="text">
-<<<<<<< HEAD
             <p>I'm a computer science graduate with immense curiosity for everything. I love reading and binge watching shows to escape my problems. I love web development and I want it to be my full-time job one day. I'm currently working on a podcast that I hope will be interesting. So, please feel free to reach out even if it's just for a quick chat.</p>
-=======
-            <p>Computer science graduate with immense curiosity for everything. I’ve always loved solving complex problems and creating interesting things. I’m looking forward to any opportunity to show my skills and learn.</p>
->>>>>>> cdd73bd9fa813e1ef9d34c1806d811996d69f187
+
             <div className="contact-info">
               <div className="links">
                 <NavLink to='https://www.linkedin.com/in/aya-zayed-2000/'>
