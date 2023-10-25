@@ -10,6 +10,7 @@ export default function Carousel({ projects }) {
 
     return (
         <>
+<<<<<<< HEAD
             {/* <Swiper
                 className="projects"
                 direction={"vertical"}
@@ -19,6 +20,19 @@ export default function Carousel({ projects }) {
                 mousewheel={true}
                 modules={[Mousewheel]}
                 effect="fade"
+=======
+            <Swiper
+                className="projects"
+                direction={"vertical"}
+                slidesPerView={3}
+                spaceBetween={100}
+                // mousewheel={{
+                //     sensitivity: 0.5
+                // }}
+                mousewheel={true}
+                modules={[Mousewheel]}
+
+>>>>>>> cdd73bd9fa813e1ef9d34c1806d811996d69f187
             >
                 {projects.map((project) => (
                     project.data.dynamic ?
@@ -28,6 +42,7 @@ export default function Carousel({ projects }) {
                         </SwiperSlide>
                         : null
                 ))}
+<<<<<<< HEAD
             </Swiper> */}
             <div className="projects">
                 {projects.map((project) => (
@@ -38,6 +53,9 @@ export default function Carousel({ projects }) {
                         : null
                 ))}
             </div>
+=======
+            </Swiper>
+>>>>>>> cdd73bd9fa813e1ef9d34c1806d811996d69f187
         </>
     );
 }

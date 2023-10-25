@@ -26,5 +26,10 @@
     "react-router-dom": "^6.8.0",
     "swiper": "^9.3.0",
     "use-local-storage": "^2.3.6"
+<<<<<<< HEAD
   }
+=======
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+>>>>>>> cdd73bd9fa813e1ef9d34c1806d811996d69f187
 }
